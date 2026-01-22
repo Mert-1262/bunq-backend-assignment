@@ -1,0 +1,218 @@
+{
+  "info": {
+    "_postman_id": "20b489eb-ed0a-4d3a-b8c2-3c83101f03d3",
+    "name": "Chat Backend API",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51610352",
+    "_collection_link": "https://go.postman.co/collection/51610352-20b489eb-ed0a-4d3a-b8c2-3c83101f03d3?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create Group",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-User-Name",
+            "value": "{{username}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"general2\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/groups\n",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "groups\n"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List Groups",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-User-Name",
+            "value": "{{username}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"general\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/groups",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "groups"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Join Group",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-User-Name",
+            "value": "{{username}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/groups/2/join\n",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "groups",
+            "2",
+            "join\n"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Message",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-User-Name",
+            "value": "{{username}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"body\": \"hello how are you today?\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/groups/2/messages\n",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "groups",
+            "2",
+            "messages\n"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List Messages",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-User-Name",
+            "value": "{{username}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"body\": \"hello from mert\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/groups/2/messages\n",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "groups",
+            "2",
+            "messages\n"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": ""
+    },
+    {
+      "key": "username",
+      "value": ""
+    }
+  ]
+}
