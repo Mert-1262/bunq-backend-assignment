@@ -1,6 +1,5 @@
 # bunq-backend-assignment
 
-A PHP backend application built for the **bunq Backend Coding Assignment**.  
 The project provides a simple group-based messaging API implemented with **Slim Framework**, **SQLite**, and **PHPUnit**, and is fully testable via **Postman**.
 
 This repository demonstrates clean architecture, RESTful API design, and automated testing.
@@ -162,4 +161,3 @@ CI workflow is included but local test results are the source of truth.
 👤 Author
 Mert İyibiçer
 Backend Engineering Candidate
-bunq Coding Assignment
